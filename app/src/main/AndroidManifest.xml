@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pabhinav.fiboku">
+
+    <!-- Permissions must be asked for, while using for android 6 and above -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Camera is not a necessity, but if present and given permission to use, one can scan barcode to upload a book -->
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="false" />
+
+    <application
+        android:name=".application.FibokuApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".activities.SearchBookActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.PhoneNumberVerificationActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainScreenActivity"
+            android:theme="@style/ThemeWithTranslucentStatusBar" />
+        <activity
+            android:name=".activities.ConnectionsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.UploadBookActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ScannerActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.FeedbackActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.AboutActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.UploadedBookActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.MessagesNamesActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.BookDetailActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.BookConditionActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ConfirmUploadActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.MessagesActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.FindBookInFriendActivity"
+            android:theme="@style/AppTheme"/>
+
+        <!-- Provider for loading data from local storage -->
+        <provider
+            android:name=".contentprovider.UploadedBookProvider"
+            android:authorities="com.pabhinav.fiboku.contentprovider"
+            android:exported="true" />
+
+        <!-- Stack Widget -->
+        <receiver android:name=".widget.StackWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/fiboku_app_widget_info" />
+        </receiver>
+
+        <!-- Stack Widget Service -->
+        <service
+            android:name=".widget.StackWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <!-- Whenever there is a network change, this receiver gets triggered -->
+        <receiver android:name=".receiver.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Crash Report ACRA -->
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:process=":error_report"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <!-- Google analytics -->
+        <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="<Your_fabric_key>" />
+
+
+    </application>
+
+</manifest>

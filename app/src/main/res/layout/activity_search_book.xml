@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.pabhinav.fiboku.activities.SearchBookActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/density_64dp"
+        android:background="@color/colorPrimary"
+        android:elevation="12dp"
+        android:id="@+id/search_relative_layout_search_book">
+
+        <EditText
+            android:contentDescription="@string/search_by_title_author_isbn_publisher_keyword"
+            android:id="@+id/search_edit_text_search_book"
+            android:layout_margin = "@dimen/density_8dp"
+            android:padding="@dimen/density_4dp"
+            android:textSize="@dimen/text_density_18sp"
+            android:hint="@string/search_by_title_author_isbn_publisher_keyword"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:background="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_result_recycler_view_search_book"
+        android:layout_below="@id/search_relative_layout_search_book"
+        android:layout_width="match_parent"
+        android:background="@color/background_grey"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+
+</RelativeLayout>

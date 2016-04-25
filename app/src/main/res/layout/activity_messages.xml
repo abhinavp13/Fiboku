@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pabhinav.fiboku.activities.MessagesActivity">
+
+    <RelativeLayout
+        android:transitionName="fakeActionBarTransition"
+        android:id="@+id/fake_action_bar"
+        android:layout_width="match_parent"
+        android:elevation="5dp"
+        android:layout_height="@dimen/density_56dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="@dimen/density_56dp"
+            android:layout_height="@dimen/density_56dp"
+            android:focusable="true"
+            android:contentDescription="@string/go_back"
+            android:background="@drawable/button_click_background"
+            android:padding="@dimen/density_16dp"
+            android:onClick="backClicked"
+            android:src = "@drawable/ic_arrow_back_white_24dp"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_density_18sp"
+            android:gravity="center"
+            android:text = "@string/messages"
+            android:textColor="@android:color/white"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:background="#fafafa"
+        android:layout_above="@+id/message_input_box"
+        android:id="@+id/messages_recycler_view"
+        android:layout_below="@+id/fake_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:id="@+id/message_input_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/message_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:focusable="true"
+            android:contentDescription="@string/enter_your_message_here"
+            android:hint="@string/type_your_message_here"
+            android:maxLines="4"
+            android:maxLength="500"
+            android:textSize="@dimen/text_density_14sp"
+            android:layout_marginStart="@dimen/density_16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imageView8" />
+
+        <ImageView
+            android:contentDescription="@string/send_message"
+            android:focusable="true"
+            android:onClick="messageSendClicked"
+            android:layout_width="@dimen/density_56dp"
+            android:layout_height="@dimen/density_56dp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/density_16dp"
+            android:layout_alignParentEnd="true"
+            android:src = "@drawable/ic_send_black_24dp"
+            android:id="@+id/imageView8" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

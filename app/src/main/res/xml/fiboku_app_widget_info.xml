@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Used formula : height = (number_of_tiles_vertically * 74 - 2) dp
+                    width = (number_of_tiles_horizontally * 74 -2) dp -->
+<appwidget-provider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minHeight="220dp"
+    android:minWidth="294dp"
+    android:updatePeriodMillis="3600000"
+    android:previewImage="@drawable/preview_stack"
+    android:initialLayout="@layout/widget_layout"
+    android:autoAdvanceViewId="@id/stack_view"
+    android:widgetCategory="home_screen"/>

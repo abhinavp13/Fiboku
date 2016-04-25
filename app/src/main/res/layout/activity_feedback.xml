@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pabhinav.fiboku.activities.FeedbackActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:id="@+id/relativeLayout5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:text = "@string/feedback_center"
+                    android:layout_toEndOf="@+id/imageView4"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true" />
+
+                <ImageView
+                    android:onClick="toggleDrawer"
+                    android:layout_width="56dp"
+                    android:padding="16dp"
+                    android:contentDescription="@string/menu"
+                    android:focusable="true"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_dehaze_white_24dp"
+                    android:id="@+id/imageView4" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:contentDescription="@string/fiboku_icon"
+                android:layout_margin="32dp"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/fiboku_shadow_icon"
+                android:layout_below="@+id/relativeLayout5"
+                android:layout_alignParentStart="true"
+                android:id="@+id/imageView5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_density_24sp"
+                android:textColor="@android:color/white"
+                android:text = "@string/hello"
+                android:layout_alignTop="@+id/imageView5"
+                android:layout_toEndOf="@+id/imageView5"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_density_16sp"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="18dp"
+                android:text = "@string/feedback_string"
+                android:layout_below="@+id/textView2"
+                android:layout_alignStart="@+id/textView2" />
+
+            <RelativeLayout
+                android:elevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/editText" >
+
+                <EditText
+                    android:focusable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_message"
+                    android:textColor="@android:color/black"
+                    android:background="@android:color/white"
+                    android:textSize="@dimen/text_density_16sp"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:id="@+id/heading_message"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/imageView6" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:padding="4dp"
+                    android:contentDescription="@string/send_feedback"
+                    android:focusable="true"
+                    android:onClick="takeFeedback"
+                    android:layout_alignBottom="@+id/heading_message"
+                    android:layout_alignTop="@+id/heading_message"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_send_black_24dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/imageView6" />
+
+            </RelativeLayout>
+
+            <View
+                android:elevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#aaaaaa"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/editText"
+                android:layout_alignEnd="@+id/editText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:elevation="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/white"
+            android:layout_weight="1" >
+
+            <EditText
+                android:focusable="true"
+                android:id="@+id/long_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="20"
+                android:padding="8dp"
+                android:textSize="@dimen/text_density_14sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:gravity="top"
+                android:hint="@string/please_leave_detailed_feedback"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

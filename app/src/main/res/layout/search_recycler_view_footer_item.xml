@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dots="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/retry_view_group_relative_layout_search_book"
+    android:layout_width="match_parent"
+    android:background="@color/background_grey"
+    android:layout_below="@+id/search_result_recycler_view_search_book"
+    android:gravity="center"
+    android:layout_height="@dimen/density_96dp">
+
+    <TextView
+        android:id="@+id/retry_text_search_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/text_density_16sp"
+        android:text="@string/could_not_complete_search_query"/>
+
+    <Button
+        android:id="@+id/retry_button_search_book"
+        android:onClick="retryClicked"
+        android:layout_marginTop="@dimen/density_4dp"
+        android:layout_width="@dimen/density_56dp"
+        android:layout_height="@dimen/density_32dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:text = "@string/retry_button"
+        android:visibility="gone"
+        android:layout_below="@id/retry_text_search_book"
+        android:layout_centerHorizontal="true" />
+
+    <pl.tajchert.sample.DotsTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dots_search_book"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/density_8dp"
+        android:textSize="56sp"
+        android:textColor="@color/colorPrimary"
+        dots:autoplay="false"
+        dots:period="1000"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

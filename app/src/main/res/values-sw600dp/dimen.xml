@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Here density prefix just denotes that using these dimens will have different
+        values for different screen sizes, hence, most of the layouts automatically scale in
+         different screens using these dimensions, and we need not have separate layouts for
+         tablets and mobiles in most of the cases (unless, there is a significant layout difference) -->
+    <dimen name="density_4dp">8dp</dimen>
+    <dimen name="density_8dp">16dp</dimen>
+    <dimen name="density_10dp">20dp</dimen>
+    <dimen name="density_12dp">24dp</dimen>
+    <dimen name="density_14dp">28dp</dimen>
+    <dimen name="density_16dp">32dp</dimen>
+    <dimen name="density_24dp">48dp</dimen>
+    <dimen name="density_32dp">64dp</dimen>
+    <dimen name="density_56dp">112dp</dimen>
+    <dimen name="density_64dp">128dp</dimen>
+    <dimen name="density_72dp">144dp</dimen>
+    <dimen name="density_84dp">168dp</dimen>
+    <dimen name="density_96dp">172dp</dimen>
+    <dimen name="density_108dp">190dp</dimen>
+    <dimen name="density_120dp">210dp</dimen>
+    <dimen name="density_136dp">220dp</dimen>
+    <dimen name="density_144dp">244dp</dimen>
+    <dimen name="density_152dp">256dp</dimen>
+    <dimen name="density_160dp">268dp</dimen>
+    <dimen name="density_168dp">278dp</dimen>
+    <dimen name="density_176dp">288dp</dimen>
+    <dimen name="density_184dp">290dp</dimen>
+    <dimen name="density_192dp">300dp</dimen>
+    <dimen name="density_200dp">310dp</dimen>
+
+    <dimen name="text_density_12sp">20sp</dimen>
+    <dimen name="text_density_14sp">24sp</dimen>
+    <dimen name="text_density_16sp">26sp</dimen>
+    <dimen name="text_density_18sp">28sp</dimen>
+    <dimen name="text_density_20sp">30sp</dimen>
+    <dimen name="text_density_22sp">32sp</dimen>
+    <dimen name="text_density_24sp">34sp</dimen>
+
+    <dimen name="tw__login_btn_text_size">16sp</dimen>
+</resources>

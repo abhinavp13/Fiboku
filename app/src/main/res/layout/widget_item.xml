@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main_linear_layout"
+    android:background="@color/colorPrimary"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_margin="1dp"
+            android:padding="@dimen/density_16dp"
+            android:id="@+id/relative_layout_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="@dimen/density_64dp"
+                android:layout_height="@dimen/density_96dp"
+                android:id="@+id/uploaded_book_book_image_view"
+                android:background="@drawable/no_preview_available"
+                android:layout_alignParentStart="true"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="@dimen/density_16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/uploaded_book_book_title"
+                android:text = ""
+                android:contentDescription="@string/title_of_book"
+                android:layout_alignParentTop="true"
+                android:textColor="@android:color/black"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_marginTop="@dimen/density_8dp"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/uploaded_book_book_image_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/uploaded_book_book_authors"
+                android:text = ""
+                android:textColor="@color/colorPrimary"
+                android:singleLine="true"
+                android:contentDescription="@string/authors_of_book"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_density_14sp"
+                android:layout_below="@+id/uploaded_book_book_title"
+                android:layout_alignEnd="@+id/uploaded_book_book_title"
+                android:layout_alignStart="@+id/uploaded_book_book_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/uploaded_book_book_isbn"
+                android:textColor="#777777"
+                android:singleLine="true"
+                android:text = ""
+                android:contentDescription="@string/isbn_of_book"
+                android:textSize="@dimen/text_density_12sp"
+                android:layout_below="@+id/uploaded_book_book_authors"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/uploaded_book_book_authors" />
+
+            <TextView
+                android:id="@+id/uploaded_book_book_condition_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:text = "@string/book_condition_colon"
+                android:layout_above="@+id/uploaded_book_timestamp"
+                android:layout_alignStart="@+id/uploaded_book_timestamp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#555555"
+                android:text = ""
+                android:id="@+id/book_condition_"
+                android:layout_alignTop="@+id/uploaded_book_book_condition_heading"
+                android:layout_alignBottom="@+id/uploaded_book_book_condition_heading"
+                android:layout_toEndOf="@+id/uploaded_book_book_condition_heading"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/uploaded_book_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text = "@string/upload_time_colon"
+                android:textSize="10sp"
+                android:layout_alignBottom="@+id/uploaded_book_book_image_view"
+                android:layout_toEndOf="@+id/uploaded_book_book_image_view"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text = ""
+                android:id="@+id/upload_timestamp_"
+                android:textColor="#555555"
+                android:layout_alignTop="@+id/uploaded_book_timestamp"
+                android:layout_alignBottom="@+id/uploaded_book_timestamp"
+                android:layout_toEndOf="@+id/uploaded_book_timestamp"
+                tools:ignore="SmallSp" />
+
+
+        </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/density_84dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_marginStart="@dimen/density_16dp"
+        android:layout_width="@dimen/density_56dp"
+        android:layout_height="@dimen/density_56dp"
+        android:src="@drawable/contact"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="1dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="#777777"
+        android:id="@+id/icon_image_view"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:paddingTop="@dimen/density_8dp"
+        android:paddingStart="@dimen/density_16dp"
+        android:paddingEnd="@dimen/density_16dp"
+        android:text = ""
+        android:textSize="@dimen/text_density_14sp"
+        android:id="@+id/contact_name_text_view"
+        android:layout_alignTop="@+id/icon_image_view"
+        android:layout_alignStart="@+id/has_book_text_view" />
+    
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_density_12sp"
+        android:paddingTop="@dimen/density_8dp"
+        android:paddingStart="@dimen/density_16dp"
+        android:paddingEnd="@dimen/density_16dp"
+        android:text=""
+        android:layout_below="@+id/contact_name_text_view"
+        android:id="@+id/has_book_text_view"
+        android:layout_alignBottom="@+id/icon_image_view"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/icon_image_view" />
+
+</RelativeLayout>

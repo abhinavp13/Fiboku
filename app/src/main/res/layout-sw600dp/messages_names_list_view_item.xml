@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/density_84dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_marginStart="@dimen/density_16dp"
+        android:layout_width="@dimen/density_56dp"
+        android:layout_height="@dimen/density_56dp"
+        android:src="@drawable/contact"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="1dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="#777777"
+        android:id="@+id/contact_photo"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:paddingTop="@dimen/density_8dp"
+        android:textSize="@dimen/text_density_14sp"
+        android:paddingStart="@dimen/density_16dp"
+        android:text = ""
+        android:id="@+id/name_text_view"
+        android:layout_alignTop="@+id/contact_photo"
+        android:layout_alignStart="@+id/phone_number"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_density_12sp"
+        android:paddingTop="@dimen/density_8dp"
+        android:paddingStart="@dimen/density_16dp"
+        android:text=""
+        android:layout_below="@+id/name_text_view"
+        android:id="@+id/phone_number"
+        android:layout_alignBottom="@+id/contact_photo"
+        android:layout_toEndOf="@+id/contact_photo" />
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/messsage_counter_relative_layout_in_tile"
+        android:layout_width="@dimen/density_24dp"
+        android:layout_height="@dimen/density_24dp"
+        android:layout_margin="@dimen/density_16dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/circular_view">
+
+        <TextView
+            android:id="@+id/message_count_text_view_in_tile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text= ""
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.pabhinav.fiboku.activities.MainScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- Find Books -->
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <RelativeLayout
+                android:id="@+id/find_books_button"
+                android:layout_width="@dimen/density_160dp"
+                android:layout_height="@dimen/density_160dp"
+                android:focusable="true"
+                android:contentDescription="@string/find_a_book"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/density_96dp">
+
+                <ImageView
+                    android:id="@+id/find_books_colored_circular_view_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circular_view_shadow"/>
+
+                <ImageView
+                    android:id="@+id/find_books_colored_circular_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circular_view"/>
+
+
+                <ImageView
+                    android:id="@+id/find_books_white_circular_view_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/density_10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circular_view_white_shadow"/>
+
+                <ImageView
+                    android:id="@+id/find_books_white_circular_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/density_10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circular_view_white"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/find_books_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_density_16sp"
+                    android:padding="@dimen/density_4dp"
+                    android:textColor="@android:color/white"
+                    android:text = "@string/find"
+                    android:gravity="end"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_density_16sp"
+                    android:padding="@dimen/density_4dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:text = "@string/books"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <!-- Upload Books -->
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <RelativeLayout
+                android:id="@+id/upload_books_button"
+                android:contentDescription="@string/upload_a_book"
+                android:focusable="true"
+                android:layout_width="@dimen/density_160dp"
+                android:layout_height="@dimen/density_160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/density_16dp">
+
+                <ImageView
+                    android:id="@+id/upload_books_colored_circular_view_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circular_view_shadow"/>
+
+                <ImageView
+                    android:id="@+id/upload_books_colored_circular_view"
+                    android:transitionName="upperHalf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circular_view"/>
+
+
+                <ImageView
+                    android:id="@+id/upload_books_white_circular_view_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/density_10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circular_view_white_shadow"/>
+
+                <ImageView
+                    android:id="@+id/upload_books_white_circular_view"
+                    android:transitionName="lowerHalf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/density_10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circular_view_white"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/upload_books_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_density_16sp"
+                    android:padding="@dimen/density_4dp"
+                    android:textColor="@android:color/white"
+                    android:text = "@string/upload"
+                    android:gravity="end"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_density_16sp"
+                    android:padding="@dimen/density_4dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:text = "@string/books"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+    <ImageView
+        android:contentDescription="@string/menu"
+        android:focusable="true"
+        android:onClick="toggleDrawer"
+        android:layout_marginTop="@dimen/density_24dp"
+        android:layout_width="@dimen/density_56dp"
+        android:layout_height="@dimen/density_56dp"
+        android:padding="@dimen/density_16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_dehaze_white_24dp"/>
+
+
+</RelativeLayout>

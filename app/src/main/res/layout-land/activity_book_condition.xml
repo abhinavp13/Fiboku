@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context="com.pabhinav.fiboku.activities.BookConditionActivity">
+
+    <RelativeLayout
+        android:id="@+id/fake_action_bar"
+        android:layout_width="match_parent"
+        android:elevation="5dp"
+        android:layout_height="@dimen/density_56dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:contentDescription="@string/go_back"
+            android:focusable="true"
+            android:layout_width="@dimen/density_56dp"
+            android:layout_height="@dimen/density_56dp"
+            android:background="@drawable/button_click_background"
+            android:padding="@dimen/density_16dp"
+            android:onClick="backClicked"
+            android:src = "@drawable/ic_arrow_back_white_24dp"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_density_18sp"
+            android:gravity="center"
+            android:text = "@string/book_condition"
+            android:textColor="@android:color/white"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:contentDescription="@string/confirm_upload"
+            android:focusable="true"
+            android:onClick =  "tickClicked"
+            android:background="@drawable/button_click_background"
+            android:layout_width="@dimen/density_56dp"
+            android:layout_height="@dimen/density_56dp"
+            android:padding="@dimen/density_16dp"
+            android:src="@drawable/ic_done_white_24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_view_book_condition"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:layout_below="@+id/fake_action_bar"
+        android:id="@+id/relativeLayout">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/good_book_condition"
+            android:id="@+id/image_view_book_condition" />
+
+    </RelativeLayout>
+
+
+    <SeekBar
+        android:id="@+id/seek_bar_book_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:max="6"
+        android:progress="4"
+        android:focusable="true"
+        android:contentDescription="@string/rate_your_book_condition_apostrophy"
+        android:layout_marginBottom="@dimen/density_32dp"
+        android:layout_marginStart="@dimen/density_32dp"
+        android:layout_marginEnd="@dimen/density_32dp"
+        android:layout_below="@+id/condition_detail_text_view"/>
+
+
+
+    <TextView
+        android:id="@+id/text_view_book_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/density_16dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/text_density_18sp"
+        android:textColor="@android:color/white"
+        android:text = "@string/good"
+         />
+
+    <TextView
+        android:id="@+id/condition_detail_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/density_16dp"
+        android:text = "@string/good_description"
+        android:layout_below="@+id/text_view_book_condition"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:clipToPadding="false">
+
+    <com.pabhinav.fiboku.customanimation.AnimatedLogoView
+        android:id="@+id/animated_logo"
+        android:layout_width="305dp"
+        android:gravity = "center"
+        android:layout_height="@dimen/density_96dp"
+        android:contentDescription="@string/app_name"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

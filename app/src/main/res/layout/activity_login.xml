@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pabhinav.fiboku.activities.LoginActivity">
+    
+    <com.pabhinav.fiboku.customviews.TriangleShapeView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/view"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+
+    <LinearLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_margin="@dimen/density_16dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:padding="@dimen/density_16dp"
+        android:elevation="@dimen/density_4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/loading_text_view"
+            android:textSize="@dimen/text_density_16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/density_8dp"
+            android:layout_height="wrap_content"
+            android:text = "@string/loading"/>
+
+        <pl.tajchert.sample.DotsTextView
+            android:id="@+id/dots_text_view"
+            xmlns:dots="http://schemas.android.com/apk/res-auto"
+            android:textSize="@dimen/text_density_18sp"
+            dots:autoplay = "true"
+            dots:period="1000"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:background="@android:color/white"
+        android:id="@+id/card_view_1"
+        android:layout_width="match_parent"
+        card_view:cardElevation="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        card_view:cardUseCompatPadding="true"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:text = "@string/sign_up_new_user"
+                />
+
+            <TextView
+                android:padding="16dp"
+                android:textColor="#555555"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity = "center"
+                android:textSize="14sp"
+                android:text = "@string/enter_your_name_email_password_below"/>
+
+            <!-- Name -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_name"
+                android:padding="8dp"
+                android:contentDescription="@string/enter_your_name_here"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+               >
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/name_edit_text"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/your_name" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Email -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_email"
+                android:padding="8dp"
+                android:contentDescription="@string/enter_your_email_id_here"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/email_edit_text"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/your_email" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Password -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_password"
+                android:padding="8dp"
+                android:contentDescription="@string/enter_your_password_here"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:layout_marginBottom="32dp"
+                android:focusableInTouchMode="true"
+                >
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/password_edit_text"
+                    android:textSize="16sp"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:focusable="true"
+                    android:contentDescription="@string/cancel"
+                    android:onClick="cancelClicked"
+                    android:textColor="@color/colorPrimary"
+                    android:text = "@string/cancel"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:focusable="true"
+                    android:contentDescription="@string/sign_up"
+                    android:onClick="signUpClicked"
+                    android:textColor="@color/colorPrimary"
+                    android:text = "@string/sign_up"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

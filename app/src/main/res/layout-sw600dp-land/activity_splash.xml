@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pabhinav.fiboku.activities.SplashActivity">
+
+    <ImageView
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/borrow_lend"
+        android:layout_above="@+id/view6"
+        android:id="@+id/imageView10" />
+
+
+
+    <com.pabhinav.fiboku.customviews.TriangleShapeView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/view"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/view6" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/density_32dp"
+        android:layout_width="@dimen/density_72dp"
+        android:layout_height="@dimen/density_72dp"
+        android:src="@drawable/fiboku_icon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <fragment android:name="com.pabhinav.fiboku.fragment.LogoFragment"
+        android:id="@+id/animated_logo_fragment"
+        android:layout_width="400dp"
+        android:gravity = "center"
+        android:layout_height="150dp"
+        android:contentDescription="@string/app_name"
+        android:layout_below="@+id/imageView10"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

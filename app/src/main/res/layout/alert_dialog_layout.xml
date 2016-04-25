@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/density_16dp"
+        android:textSize="@dimen/text_density_18sp"
+        android:textColor="@color/colorPrimary"
+        android:text = ""/>
+
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_margin="@dimen/density_16dp"
+        android:textSize="@dimen/text_density_14sp"
+        android:text = ""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/density_56dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/left_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_density_16sp"
+            android:focusable="true"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:text = ""/>
+
+
+        <TextView
+            android:id="@+id/right_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_density_16sp"
+            android:textColor="@color/colorPrimary"
+            android:text = ""/>
+    </LinearLayout>
+
+</LinearLayout>

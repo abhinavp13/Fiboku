@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/density_16dp"
+        android:textSize="@dimen/text_density_18sp"
+        android:textColor="@color/colorPrimary"
+        android:text = "@string/title_for_this_dialog"/>
+
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_margin="@dimen/density_16dp"
+        android:textSize="@dimen/text_density_16sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text = "@string/body_dummy_text"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_margin="@dimen/density_16dp"
+        android:id="@+id/input_dialog_text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextLabel">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/in_dialog_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_density_16sp"
+            android:inputType="text"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/empty_input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/density_16dp"
+        android:layout_marginBottom="@dimen/density_16dp"
+        android:visibility="gone"
+        android:textColor="@android:color/holo_red_light"
+        android:text = "@string/you_left_input_empty"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/density_56dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/left_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:textSize="@dimen/text_density_16sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:text = "@string/left_button"/>
+
+
+        <TextView
+            android:id="@+id/right_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="@dimen/text_density_16sp"
+            android:textColor="@color/colorPrimary"
+            android:text = "@string/right_button" />
+
+    </LinearLayout>
+
+</LinearLayout>

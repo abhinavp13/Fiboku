@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_container_relative_layout"
+    tools:context=".activities.FindBookInFriendActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:elevation="4dp"
+        android:layout_height="@dimen/density_56dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/relativeLayout2">
+
+        <ImageView
+            android:focusable="true"
+            android:contentDescription="@string/go_back"
+            android:layout_width="@dimen/density_56dp"
+            android:layout_height="@dimen/density_56dp"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:onClick="backClicked"
+            android:padding="@dimen/density_16dp"
+            android:id="@+id/imageView9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/density_56dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_density_18sp"
+            android:textColor="@android:color/white"
+            android:text = "Finding Friend With The Book"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView9" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/loading_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_density_16sp"
+        android:visibility="gone"
+        android:text = "@string/loading_dot"/>
+
+    <TextView
+        android:id="@+id/nothing_found_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_density_16sp"
+        android:text = "@string/nothing_found"/>
+
+    <ListView
+        android:id="@+id/friend_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout2" />
+
+</RelativeLayout>

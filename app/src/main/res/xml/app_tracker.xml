@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- End current session if app sleeps for a period of time -->
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!--  The property id associated with this analytics tracker -->
+    <string name="ga_trackingId">Your Tracking Id</string>
+
+    <string name="ga_sampleFrequency">100.0</string>
+
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <screenName name="com.pabhinav.fiboku.activities.LoginActivity">Login Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.MainActivity">Main Activity Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.SearchBookActivity">Book Search Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.MainScreenActivity">Main Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.ConnectionsActivity">Connections Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.UploadBookActivity">Upload Book Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.ScannerActivity">Scanner Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.FeedbackActivity">Feedback Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.AboutActivity">About Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.SplashActivity">Splash Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.UploadedBookActivity">Uploaded Book Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.MessagesNamesActivity">Message Name Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.BookDetailActivity">Book Detail Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.BookConditionActivity">Book Condition Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.ConfirmUploadActivity">Confirm Upload Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.MessagesActivity">Messages Screen</screenName>
+    <screenName name="com.pabhinav.fiboku.activities.FindBookInFriendActivity">Find Book In Friend Screen</screenName>
+
+</resources>

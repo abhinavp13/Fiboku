@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.pabhinav.fiboku.activities.PhoneNumberVerificationActivity">
+
+    <com.pabhinav.fiboku.customviews.TriangleShapeView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/view"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_margin="@dimen/density_16dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:padding="@dimen/density_16dp"
+        android:elevation="@dimen/density_4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/loading_text_view"
+            android:textSize="@dimen/text_density_16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/density_8dp"
+            android:layout_height="wrap_content"
+            android:text = "@string/loading"/>
+
+        <pl.tajchert.sample.DotsTextView
+            android:id="@+id/dots_text_view"
+            xmlns:dots="http://schemas.android.com/apk/res-auto"
+            android:textSize="@dimen/text_density_18sp"
+            dots:autoplay = "true"
+            dots:period="1000"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:visibility="visible"
+        android:background="@android:color/white"
+        android:id="@+id/card_view_1"
+        android:layout_width="match_parent"
+        card_view:cardElevation="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        card_view:cardUseCompatPadding="true"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_density_18sp"
+                android:padding="@dimen/density_16dp"
+                android:layout_marginTop="@dimen/density_16dp"
+                android:text = "@string/phone_number_verification"
+                />
+
+            <TextView
+                android:padding="16dp"
+                android:textColor="#555555"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity = "center"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:textSize="@dimen/text_density_14sp"
+                android:text = "@string/phone_number_description_message"/>
+
+            <com.digits.sdk.android.DigitsAuthButton
+                android:focusable="true"
+                android:contentDescription="@string/verify_your_phone_number"
+                android:layout_margin="@dimen/density_16dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:text = "@string/verify_my_number"
+                android:id="@+id/auth_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

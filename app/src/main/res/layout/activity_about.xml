@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.pabhinav.fiboku.activities.AboutActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:elevation="4dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/relativeLayout8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:text = "@string/about_fiboku"
+                android:layout_toEndOf="@+id/imageView41"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true" />
+
+            <ImageView
+                android:focusable="true"
+                android:onClick="toggleDrawer"
+                android:layout_width="56dp"
+                android:padding="16dp"
+                android:contentDescription="@string/menu"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_dehaze_white_24dp"
+                android:id="@+id/imageView41" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:focusable="true"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@android:color/white"
+            android:id="@+id/relativeLayout5"
+            android:layout_below="@+id/relativeLayout8">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/view5" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/view4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text = "@string/fiboku_for_android"
+                android:layout_below="@+id/view5"
+                android:id="@+id/textView6"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/textView5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:gravity = "center"
+                android:paddingBottom="4dp"
+                android:text = "@string/your_book_sharing_app"
+                android:id="@+id/textView5"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:focusable="true"
+            android:id = "@+id/relativeLayout21"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/relativeLayout5"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_margin="32dp"
+                android:layout_width="72dp"
+                android:layout_height="96dp"
+                android:contentDescription="@string/fiboku_icon"
+                android:src="@drawable/fiboku_icon"
+                android:layout_alignParentStart="true"
+                android:id="@+id/imageView5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:text = "@string/name_colon"
+                android:id="@+id/textView2"
+                android:layout_alignTop="@+id/imageView5"
+                android:layout_toEndOf="@+id/imageView5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:textColor="@android:color/black"
+                android:text = "@string/app_name"
+                android:gravity="center_vertical"
+                android:id="@+id/textView4"
+                android:layout_toEndOf="@+id/textView2"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_alignBottom="@+id/textView2" />
+
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:text = "@string/address_colon"
+                android:id="@+id/textView211"
+                android:layout_below="@+id/textView2"
+                android:layout_toEndOf="@+id/imageView5" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text = "@string/temporary_address"
+                android:gravity="center_vertical"
+                android:id="@+id/textView411"
+                android:layout_below="@+id/textView211"
+                android:layout_toEndOf="@+id/imageView5" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_one"
+            android:layout_below="@+id/relativeLayout21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text = "@string/key_skills"/>
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/education"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/java_xml_gradle"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/qualification"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/apk"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/relevant_skill"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/makes_borrowing_and_lending"/>
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/experience"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/version_1"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/certification"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/all_rights_reserved"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text = "@string/personal_info"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/father_name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/abhinav_puri"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/birthday"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/date_about"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/height"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/inches"/>
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/email_text"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/pabhinav"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text = "@string/nomination"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:text = "@string/android_nanodegree"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/inspiration_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout_one"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="24dp"
+            android:text = "@string/projects"/>
+
+        <TextView
+            android:focusable="true"
+            android:id="@+id/inspiration_one_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inspiration_one"
+            android:textSize="14sp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text = "@string/github_link"/>
+
+
+        <TextView
+            android:id="@+id/inspiration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inspiration_one_text"
+            android:textSize="14sp"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="24dp"
+            android:text = "@string/motivation"/>
+
+
+        <TextView
+            android:focusable="true"
+            android:id="@+id/thought_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inspiration"
+            android:textSize="14sp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:text = "@string/quote"/>
+
+        <TextView
+            android:id="@+id/thought_text_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thought_text"
+            android:textSize="14sp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
+            android:textStyle="italic"
+            android:layout_alignParentEnd="true"
+            android:text = "@string/robert_frost"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_margin="24dp"
+            android:layout_below="@+id/thought_text_author"
+            android:background="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</ScrollView>

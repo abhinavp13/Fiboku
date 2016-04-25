@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:background="#fafafa"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        card_view:cardElevation="2dp"
+        android:layout_margin="@dimen/density_32dp"
+        card_view:cardUseCompatPadding="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/message_card_view">
+        
+        <RelativeLayout
+            android:padding="@dimen/density_8dp"
+            android:id="@+id/relative_layout_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/message_body_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/density_16dp"
+                android:textColor="@android:color/black"
+                android:text = ""/>
+
+            <TextView
+                android:id="@+id/time_for_message_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "@string/time_for_message"
+                android:textSize="11sp"
+                android:layout_below="@+id/message_body_text_view"
+                android:layout_alignParentEnd="true"
+                card_view:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "@string/message_sender"
+        android:textSize="11sp"
+        android:id="@+id/message_sender_name_text_view"
+        android:layout_marginStart="@dimen/density_32dp"
+        android:layout_alignTop="@+id/left_fab"
+        android:layout_alignStart="@+id/message_card_view"
+        card_view:ignore="SmallSp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "@string/you"
+        android:textSize="11sp"
+        android:layout_marginEnd="@dimen/density_32dp"
+        android:id="@+id/message_receiver_name_text_view"
+        android:layout_alignTop="@+id/right_fab"
+        android:layout_alignEnd="@+id/message_card_view"
+        card_view:ignore="SmallSp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize ="mini"
+        android:id="@+id/left_fab"
+        android:layout_margin="@dimen/density_16dp"
+        app:backgroundTint="@android:color/white"
+        android:src="@drawable/contact"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize ="mini"
+        android:id="@+id/right_fab"
+        android:layout_margin="@dimen/density_16dp"
+        app:backgroundTint="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/contact"
+        card_view:ignore="RelativeOverlap" />
+
+
+</RelativeLayout>
